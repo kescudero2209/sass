@@ -1,9 +1,11 @@
 //
 // Base styles
 //
-
+.text-light{
+  color: $light;
+}
 .btn {
-  display: inline-block;
+  @extend .text-light;
   font-family: $btn-font-family;
   font-weight: $btn-font-weight;
   line-height: $btn-line-height;
