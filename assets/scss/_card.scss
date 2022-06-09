@@ -1,8 +1,12 @@
 //
 // Base styles
 //
-
+.card-bg-dark{
+  background-color: $dark !important;
+  color: $light;
+}
 .card {
+  @extend .card-bg-dark;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -42,10 +46,13 @@
     border-top: 0;
   }
 }
-
+.card-font{
+  font-family: 'Lobster', cursive !important;
+}
 .card-body {
   // Enable `flex-grow: 1` for decks and groups so that card blocks take up
   // as much space as possible, ensuring footers are aligned to the bottom.
+  @extend .card-font;
   flex: 1 1 auto;
   padding: $card-spacer-y $card-spacer-x;
   color: $card-color;
